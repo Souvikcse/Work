@@ -1,0 +1,617 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    /* font: normal 16px sans-serif; */
+    /* color: #555; */
+}
+
+body {
+    /* border: 2px solid black; */
+    margin: 0;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    z-index: -2;
+    background-image: url("new-back.jpeg");
+}
+
+@keyframes slidein {
+    100% {
+        right: 10%;
+    }
+}
+
+#h1 {
+    font-family: 'Playfair Display SC', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 3rem;
+    margin-left: 3rem;
+    color: black;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+}
+
+#h2 {
+    text-align: right;
+}
+
+#c1 {
+    font-family: 'Maiden Orange', cursive;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    margin: 0;
+    line-height: 0;
+}
+@media (max-width: 400px){
+    #h1{
+        font-size: 2rem;
+    }
+    #c1{
+        font-size: 1.40rem;
+    }
+}
+
+#c2 {
+    font-family: 'Maiden Orange', cursive;
+    color: white;
+    font-weight: 700;
+    font-size: 4rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#h3 {
+    font-size: 8rem;
+    margin: 0px;
+}
+
+a {
+    color: white;
+    cursor: pointer;
+}
+
+.navbar {
+    font-family: 'Red Rose', cursive;
+    font-size: 2rem;
+    list-style: none;
+}
+
+.fa-bars {
+    font-size: 2rem;
+    color: black;
+}
+
+.navbar a:hover {
+    color: black;
+    text-decoration: none;
+    animation: 0.5s link 0s forwards;
+}
+
+@keyframes link {
+    100% {
+        text-decoration: underline;
+    }
+}
+.btn.order{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    background: #1f1e1e;
+    font-size: 16px;
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0 auto;
+    padding: 30px 80px;
+    border-radius: 18px;
+    box-shadow: 0 6px #171616;
+}
+.btn.order:hover{
+    box-shadow: 0 4px #171616;
+    top: 2px;
+}
+.btn.order:active{
+    box-shadow: none;
+    top: 6px;
+}
+
+.content {
+    position: relative;
+    margin-top: 55px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 682px;
+    width: 100%;
+    padding: 90px;
+    animation: 2.5s moveup 0s forwards;
+    /* background: red; */
+}
+.backimg{
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 40%;
+    height: 100%;
+    -moz-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    z-index: -2;
+    background-image: url("top_element_4.png");
+    animation: 3s pose 0s forwards;
+}
+@keyframes pose{
+    100%{
+        left: 50%;
+    }
+}
+.item1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+}
+
+.item1 h1 {
+    font-family: 'Red Rose', cursive;
+    font-size: 4rem;
+}
+
+.item1.btn {
+    width: 40%;
+}
+
+.item1 h3 {
+    font-family: 'Leckerli One', cursive;
+    font-size: 3rem;
+}
+
+.item1 hr {
+    height: 3px;
+    width: 60%;
+    background-color: grey;
+}
+
+
+@keyframes moveup {
+    100% {
+        margin-top: 3px;
+        padding-top: 1%;
+    }
+}
+
+@media (max-width: 1360px) {
+    body {
+        line-height: 0.8;
+    }
+
+    .leaf {
+        display: none;
+    }
+
+    #c2 {
+        font-size: 2rem;
+    }
+
+    .content {
+        justify-content: start;
+        height: 621px;
+        margin-top: 90px;
+    }
+    .backimg{
+        top: 20%;
+    }
+    .item1 {
+        width: 55%;
+    }
+    @keyframes slidein {
+        100% {
+            right: 10%;
+        }
+    }
+    @keyframes pose{
+        100%{
+            left: 50%;
+        }
+    }
+    @keyframes moveup {
+        100% {
+            margin-top: 3px;
+        }
+    }
+}
+
+Section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+section hr {
+    width: 250px;
+    height: 3px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+hr {
+    background-color: #efeff3;
+}
+
+section h3.title {
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.carousel-item img {
+    opacity: 0.75;
+}
+
+.card-title {
+    font-family: 'Leckerli One', cursive;
+    font-size: 3rem;
+}
+
+.card-text {
+    font-family: 'Maiden Orange', cursive;
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+.card{
+    border: white;
+}
+.card-img-top{
+    border-radius: 53%;
+    transform: scale(0.7);
+    transition: transform 0.4s ease-in-out;
+}
+.card-img-top:hover {
+    transform: scale(1);
+}
+.card-footer{
+    background-color: white;
+}
+@media (max-width: 900px) {
+    .back {
+        opacity: 0.6;
+    }
+    .backimg{
+        opacity: 0.6;
+    }
+    .destinations {
+        margin-top: 13rem;
+        
+    }
+    #c1, #c2{
+        color: black;
+    }
+    .item1{
+        margin-top: 7.5rem;
+    }
+    .content {
+        padding: 1px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .content>div {
+        align-self: center;
+        height: 20rem;
+        width: 30rem;
+    }
+
+    .card-text {
+        font-size: 1.5rem;
+        font-weight: 250;
+    }
+
+    .card-title {
+        font-size: 2rem;
+    }
+
+    @keyframes slidein {
+        100% {
+            right: 15%;
+        }
+    }
+    @keyframes pose{
+        100%{
+            left: 35%;
+        }
+    }
+    @keyframes moveup {
+        100% {
+            margin-top: 3px;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .content > div {
+        width: 20rem;
+    }
+    .item1{
+        margin-top: 7.5rem;
+    }
+    .item1 h3{
+        font-size: 2.2rem;
+    }
+    .item1 h1{
+        font-size: 2rem;
+    }
+    .card-text{
+        font-size: 1.5rem;
+        font-weight: 250;
+    }
+    .card-title{
+        font-size: 1.5rem;
+    }
+    section{
+        padding: 80px 20px;
+    }
+    .backimg{
+        opacity: 0.45;
+    }
+    @keyframes slidein {
+        100% {
+            right: 25%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    @keyframes pose{
+        100%{
+            left: 15%;
+        }
+    }
+    .content.item1 h1{
+        font-size: 2rem;
+    }
+    .content.item1 h3{
+        font-size: 1.5rem;
+    }
+    .content.item1{
+        width: 20rem;
+    }
+}
+@media (max-width: 400px){
+    @keyframes pose{
+        100%{
+            left: 0%;
+        }
+    }
+}
+
+.hm-gradient main{
+    background-image: url("https://rositas.netlify.app/img/team-img/food/mm-1.jpg");
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+.foot{
+    color: white;
+    font-size: 1.5rem;
+}
+.foot:hover{
+    color: white;
+}
+
+.darken-grey-text {
+    color: #2E2E2E;
+}
+
+.form {
+    width: 100%;
+    height: 60px;
+    border-radius: 7px;
+    padding: 2rem;
+}
+
+.btn.form {
+    padding: 1rem;
+}
+
+.grid {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Destinations Style */
+.destinations .grid li {
+    height: 350px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.destinations .grid li img{
+    opacity: 0.55;
+}
+.destinations .grid li:hover img{
+    opacity: 1;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-family: 'Leckerli One', cursive;
+    font-size: 3rem;
+    color: white;
+    transform: translate(-50%, -50%);
+  }
+
+.destinations .grid li.small {
+    flex-basis: 30%;
+}
+
+.destinations .grid li.large {
+    flex-basis: 70%;
+}
+
+@media (max-width: 1100px) {
+
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 500px){
+    .centered{
+        font-size: 1.5rem;
+    }
+    .destinations .grid li.small,
+    .destinations .grid li.large {
+        flex-basis: 100%;
+    }
+}
+
+.section-project {
+    padding: 50px 0;
+    position: relative;
+    background-color: #222;
+}
+
+.project-carousel {
+    position: relative;
+    padding: 50px 0;
+}
+
+.project-strip {
+    margin: 150px 0 150px;
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
+
+.project-strip .project {
+    cursor: pointer;
+}
+
+.project-strip img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+.project-screen {
+    width: 768px;
+    height: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.project-screen .project-detail {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 578px;
+    height: 361px;
+    margin: 32px auto 0;
+    z-index: 1;
+    background-color: #333;
+}
+
+.project-screen .screen-frame {
+    content: " ";
+    width: 768px;
+    height: 400px;
+    position: absolute;
+    background-image: url("https://dl.dropboxusercontent.com/u/26808427/cdn/experiments/training/macbook-frame.png");
+    background-repeat: no-repeat;
+}
+
+.project-screen .project {
+    margin-right: -100%;
+    float: left;
+    cursor: move;
+}
+
+@media (max-width: 800px){
+    .project-screen{
+        width: 600px;
+    }
+    .project-screen .project-detail{
+        width: 400px;
+    }
+    .project-screen .screen-frame{
+        width: 600px;
+    }
+}
+
+@media (max-width: 625px){
+    .project-screen{
+        width: 510px;
+    }
+    .project-screen .project-detail{
+        width: 300px;
+    }
+    .project-screen .screen-frame{
+        width: 510px;
+    }
+}
+ 
+@media (max-width: 525px){
+    .project-screen{
+        width: 400px;
+    }
+    .project-screen .project-detail{
+        width: 250px;
+    }
+    .project-screen .screen-frame{
+        width: 400px;
+    }
+}
+@media (max-width: 430px){
+    .project-screen{
+        width: 250px;
+    }
+    .project-screen .project-detail{
+        width: 160px;
+    }
+    .project-screen .screen-frame{
+        width: 250px;
+    }
+}
