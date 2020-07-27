@@ -21,17 +21,51 @@
 
 <body>
   <div class="back"></div>
+
+  <!-- -------------------Mobile-Header---------------- -->
+  <div class="mobile-view">
+    <div class="head-bar">
+      <span class="fa fa-bars" onclick="myshow()" aria-hidden="true"></span>
+    </div>
+    <div class="m-head container-fluid d-flex flex-column">
+        <div class="title">
+          <i class="fa fa-cutlery" style="display: inline;" aria-hidden="true"></i> <h4 style="display: inline;">Food4You</h4>
+        </div>
+        <div>
+            <input class="head-input" type="text" placeholder="&#xf002; Search for restaurants, food items, etc" style="font-family:Arial, FontAwesome" >
+        </div>
+    </div>
+  </div>
+  <!-- ----------------------------------------------- -->
+
+  <!-- ------------Mobile Nav-Bar-------------- -->
+    <nav class="mobile-nav">
+      <div class="content">
+        <div class="remove" onclick="myHide()" style="text-align: end;"><h4 style="cursor: pointer;">X</h4></div>
+        <div class="login">
+          <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Login/Register</h3>
+        </div>
+        <div class="container mt-3">
+          <div class="mobile-item m-2"><a href="#">Home</a></div>
+          <div class="mobile-item m-2"><a href="#">Menu</a></div>
+          <div class="mobile-item m-2"><a href="#">Our Story</a></div>
+          <div class="mobile-item m-2"><a href="#">Contact Us</a></div>
+        </div>
+      </div>
+    </nav>
+  <!-- ---------------------------------------- -->
   <div class="header container-fluid">
     <div class="row d-flex justify-content-between mt-5">
       <div class="col-md-5 left" id="h1" href="#"><i class="fa fa-cutlery" style="display: inline;"
           aria-hidden="true"></i> <a>FOOD4YOU</a></div>
-      <div class="col-md-5 d-flex justify-content-end mr-5">
-        <div class="d-flex flex-column justify-content-around justify-content-end-md mt-4 mr-3 align-items-end">
+      <div class="col-md-5 d-flex justify-content-end mr-5" id="left-header">
+        <div class="left-head d-flex flex-column justify-content-around justify-content-end-md mt-4 mr-3 align-items-end">
           <div id="c1">EXPRESS DELIVERY</div>
           <div id="c2">1800 258 888</div>
         </div>
-        <div class="mobile d-flex flex-column justify-content-top" id="h3"><i class="fa fa-mobile"
-            aria-hidden="true"></i></div>
+        <div class="mobile d-flex flex-column justify-content-top" id="h3">
+          <i class="fa fa-mobile" aria-hidden="true"></i>
+        </div>
       </div>
     </div>
   </div>
@@ -78,8 +112,8 @@
   </section>
 
   <div class="container">
-    <div class="card-deck" data-aos="zoom-in">
-      <div class="card">
+    <div class="card-deck">
+      <div class="card" data-aos="zoom-in">
         <img class="card-img-top"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRKFUs3olX6szHqNQPkx7imtQQLEiMQ9hckXQ&usqp=CAU"
           alt="Card image cap">
@@ -92,7 +126,7 @@
           <a href="#" class="text-white btn btn-lg btn-success">Order Now!</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in">
         <img class="card-img-top"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTze0OA5fEeSZeEUN2qf2gczwtnJtt6ITBN1Q&usqp=CAU"
           alt="Card image cap">
@@ -104,7 +138,7 @@
           <a href="#" class="text-white btn btn-lg btn-success">Order Now!</a>
         </div>
       </div>
-      <div class="card">
+      <div class="card" data-aos="zoom-in">
         <img class="card-img-top"
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQc_NYmg95uW07i0eDkbGtknr3Fc9Orca9-_g&usqp=CAU"
           alt="Card image cap">
@@ -269,6 +303,16 @@
   </div>
 
   <!-- Javascript  -->
+  <script>
+    function myshow(){
+      var x = document.querySelector('.mobile-nav');
+      x.style.left = "0";
+    }
+    function myHide(){
+      var x = document.querySelector('.mobile-nav');
+      x.style.left = "-100%";
+    }
+  </script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();

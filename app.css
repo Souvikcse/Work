@@ -34,6 +34,96 @@ body {
         right: 10%;
     }
 }
+/* ------------------------- Mobile-Header ----------------------------*/
+.mobile-view{
+    display: none;
+    background-color: aquamarine;
+    padding-bottom: 10px;
+}
+.head-bar{
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 0.50%;
+    left: 5%;
+    transition: all 0.6s;
+}
+.head-bar span{
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.6s;
+}
+.title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0.35rem;
+}
+.head-input{
+    display: block;
+    border-radius: 7px;
+    width: 100%;
+    padding: 5px;
+}
+/* ------------------------------------------------------- */
+
+
+/* ------------------Mobile-Nav--------------------------- */
+.mobile-nav{
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color: solid transparent;
+}
+.mobile-nav > .content{
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(139,139,177,1) 0%, rgba(175,180,187,1) 70%);
+}
+.mobile-nav > .content > div{
+    width: 100%;
+}
+.mobile-nav > .content > .container{
+    /* d-flex flex-column align-items-start mt-3 */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex: 1;
+}
+.content > .login{
+    color: white;
+    text-align: center;
+    height: 37px;
+    border-bottom: 3px solid black;
+}
+.content > .remove{
+    color: red;
+    height: 1.5rem;
+    transition: all 0.6s;
+}
+.remove:active .mobile-nav{
+    display: none;
+}
+.mobile-item{
+    font-size: 1.6rem;
+    height: 2rem;
+    color: white;
+    display: block;
+    border-radius: 6px;
+}
+.mobile-item:active{
+    background-color: wheat;
+}
+/* ------------------------------------------------------ */
 
 #h1 {
     font-family: 'Playfair Display SC', serif;
@@ -82,7 +172,7 @@ body {
 }
 
 a {
-    color: white;
+    color: rgb(32, 30, 30);
     cursor: pointer;
 }
 
@@ -279,7 +369,9 @@ section p {
 .carousel-item img {
     opacity: 0.75;
 }
-
+.card-deck{
+    background-color: solid transparent;
+}
 .card-title {
     font-family: 'Leckerli One', cursive;
     font-size: 3rem;
@@ -291,7 +383,9 @@ section p {
     font-size: 1.3rem;
 }
 .card{
-    border: white;
+    background-color: solid transparent;
+    border: solid transparent;
+    min-width: 260px;
 }
 .card-img-top{
     border-radius: 53%;
@@ -302,7 +396,12 @@ section p {
     transform: scale(1);
 }
 .card-footer{
+    padding-top: 0;
     background-color: white;
+    border-top: solid transparent;
+}
+.card-footer a{
+    border-radius: 25px;
 }
 @media (max-width: 900px) {
     .back {
@@ -319,7 +418,7 @@ section p {
         color: black;
     }
     .item1{
-        margin-top: 7.5rem;
+        margin-top: 4rem;
     }
     .content {
         padding: 1px;
@@ -394,22 +493,6 @@ section p {
     }
 }
 
-@media (max-width: 500px) {
-    @keyframes pose{
-        100%{
-            left: 15%;
-        }
-    }
-    .content.item1 h1{
-        font-size: 2rem;
-    }
-    .content.item1 h3{
-        font-size: 1.5rem;
-    }
-    .content.item1{
-        width: 20rem;
-    }
-}
 @media (max-width: 400px){
     @keyframes pose{
         100%{
@@ -495,12 +578,38 @@ section p {
         flex-basis: 50%;
     }
 }
-@media (max-width: 500px){
+@media (max-width: 600px){
+    .mobile-view{
+        display: block;
+    }
+    .header{
+        display: none;
+    }
+    @keyframes pose{
+        100%{
+            left: 7%;
+        }
+    }
+    .content.item1 h1{
+        font-size: 2rem;
+    }
+    .content.item1 h3{
+        font-size: 1.5rem;
+    }
+    .content.item1{
+        width: 20rem;
+    }
+    .navbar-toggler{
+        display: none;
+    }
     .item1{
         margin-top: 2.5rem;
     }
     .centered{
         font-size: 1.5rem;
+    }
+    .destinations{
+        margin-top: 5rem;
     }
     .destinations .grid li.small,
     .destinations .grid li.large {
