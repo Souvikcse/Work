@@ -16,13 +16,14 @@
   
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css'>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
   <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
   <div class="back"></div>
 
-  <!-- -------------------Mobile-Header---------------- -->
+  <!-- ------------------- Mobile-Header ---------------- -->
   <div class="mobile-view">
     <div class="head-bar">
       <span class="fa fa-bars" onclick="myshow()" aria-hidden="true"></span>
@@ -41,7 +42,9 @@
   <!-- ------------Mobile Nav-Bar-------------- -->
     <nav class="mobile-nav">
       <div class="content">
-        <div class="remove" onclick="myHide()" style="text-align: end;"><h4 style="cursor: pointer;">X</h4></div>
+        <div class="remove" onclick="myHide()" style="text-align: end;">
+          <i class="fa fa-window-close" style="cursor: pointer;" aria-hidden="true"></i>
+        </div>
         <div class="login">
           <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Login/Register</h3>
         </div>
@@ -221,86 +224,65 @@
     </div>
   </div>
 
-
-  <div class="hm-gradient ">
-    <main class="bg-info" >
-      <div class="container mt-4 ">
-        <div class="row">
-          <div class="col-md-12">
-            <footer class="page-footer deep-purple center-on-small-only pt-0">
-              <div class="container foot">
-                <div class="row pt-5 mb-3 text-center d-flex justify-content-center">
-
-                  <div class="col-md-2 mb-3 foot">
-                    <h6 class="title font-bold" ><a class="foot" href="#!">About us</a></h6>
-                  </div>
-                  <div class="col-md-2 mb-3 foot">
-                    <h6 class="title font-bold"><a class="foot" href="#!">Products</a></h6>
-                  </div>
-
-                  <div class="col-md-2 mb-3 foot">
-                    <h6 class="title font-bold"><a class="foot" href="#!">Awards</a></h6>
-                  </div>
-
-                  <div class="col-md-2 mb-3 foot">
-                    <h6 class="title font-bold"><a class="foot" href="#!">Help</a></h6>
-                  </div>
-
-                  <div class="col-md-2 mb-3 foot">
-                    <h6 class="title font-bold"><a class="foot" href="#!">Contact</a></h6>
-                  </div>
-                </div>
-
-                <hr class="rgba-white-light foot" style="margin: 0 15%;">
-
-                <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
-                  <div class="col-md-8 col-12 mt-5 foot">
-                    <p style="line-height: 1.7rem">Bakery food near me Beverages food near me Biryani food near me
-                      Burger food near me Cafe food near me Chinese food near me Continental food near me Desserts food
-                      near me Healthy Food food near me Ice Cream food near me Italian food near me Mithai food near
-                      meMomos food near meMughlai food near meNorth Indian food near mePizza food near meRolls food near
-                      meSandwich food near meSouth Indian food near meStreet Food food near me.</p>
-                  </div>
-
-                </div>
-
-                <hr class="clearfix d-md-none rgba-white-light bg-dark">
-
-                <div class="row pb-3">
-
-                  <div class="col-md-12">
-                    <div class="footer-socials mb-5 d-flex justify-content-center">
-                      <!--Facebook-->
-                      <a class="icons-sm fb-ic foot" href="#"><i class="fa fa-facebook fa-lg white-text mr-md-4"> </i></a>
-                      <!--Twitter-->
-                      <a class="icons-sm tw-ic foot" href="#"><i class="fa fa-twitter fa-lg white-text mx-md-4"> </i></a>
-                      <!--Google +-->
-                      <a class="icons-sm gplus-ic foot" href="#"><i class="fa fa-google-plus fa-lg white-text mx-md-4"> </i></a>
-                      <!--Linkedin-->
-                      <a class="icons-sm li-ic foot" href="#"><i class="fa fa-linkedin fa-lg white-text mx-md-4"> </i></a>
-                      <!--Instagram-->
-                      <a class="icons-sm ins-ic foot" href="#"><i class="fa fa-instagram fa-lg white-text mx-md-4"> </i></a>
-                      <!--Pinterest-->
-                      <a class="icons-sm pin-ic foot"><i class="fa fa-pinterest fa-lg white-text ml-md-4"> </i></a>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <div class="footer-copyright">
-                <div class="container-fluid d-flex justify-content-center foot">
-                  © 2020 Copyright: <a class="foot" href="#"> __Food4You__ </a>
-                </div>
-              </div>
-
-            </footer>
-          </div>
-
-        </div>
+  <!-- ----------------- Footer ------------ -->
+  <div class="footer mt-3">
+    <div class="inner-footer">
+  
+  <!--  for company name and description -->
+      <div class="footer-items">
+        <h1>FOOD4YOU</h1>
+        <p>Order your favourite food items from the best rated restaurants.</p>
       </div>
-    </main>
-
+  
+  <!--  for quick links  -->
+      <div class="footer-items">
+        <h3>Quick Links</h3>
+        <div class="border1"></div> <!--for the underline -->
+          <ul class="foo">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Search</li></a>
+            <a href="#"><li>Contact</li></a>
+            <a href="#"><li>About</li></a>
+          </ul>
+      </div>
+  
+  <!--  for some other links -->
+      <div class="footer-items">
+        <h3>Recipes</h3>
+        <div class="border1"></div>  <!--for the underline -->
+          <ul class="foo">
+            <a href="#"><li>Indian</li></a>
+            <a href="#"><li>Chinese</li></a>
+            <a href="#"><li>Mexican</li></a>
+            <a href="#"><li>Italian</li></a>
+          </ul>
+      </div>
+  
+  <!--  for contact us info -->
+      <div class="footer-items">
+        <h3>Contact us</h3>
+        <div class="border1"></div>
+          <ul class="foo">
+            <li><i class="fa fa-map-marker" aria-hidden="true"></i>XYZ, abc</li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i>123456789</li>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i>xyz@gmail.com</li>
+          </ul> 
+        
+  <!--   for social links -->
+          <div class="social-media">
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-google-plus-square"></i></a>
+          </div> 
+      </div>
+    </div>
+    
+  <!--   Footer Bottom start  -->
+    <div class="footer-bottom">
+      Copyright &copy; Food and Burps 2020.
+    </div>
   </div>
+  <!-- ----------------------------------------------- -->
 
   <!-- Javascript  -->
   <script>
